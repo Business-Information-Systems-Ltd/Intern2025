@@ -1,0 +1,64 @@
+/* Main Content Styles */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: calc(100vh - 120px); /* Adjust based on header/footer height */
+    padding: 40px 20px;
+    background-color: #f5f7fa;
+}
+
+main h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    max-width: 800px;
+}
+
+main p {
+    font-size: 1.25rem;
+    color: #7f8c8d;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.search-button {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    main h1 {
+        font-size: 2rem;
+    }
+    
+    main p {
+        font-size: 1rem;
+    }
+    
+    .search-button {
+        padding: 12px 28px;
+    }
+}
