@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="assets/css/pages/about.css">
+    <title>About</title>
+    <link rel="stylesheet" href="assets/css/pages/home.css">
     <link rel="stylesheet" href="assets/css/pages/style.css">
-   
-
-    
 </head>
+
 <body>
+
     <div id="header"></div>
-
-
+ 
     <main>
-            <h2><b>About Us</b></h2>
-
-            <h3>Who We Are</h3>
-            <p>Ausurhatio enoleating development time. Our inninster custern serving a proad miatiortisations, and distorect custern only.</p>
-
-            <h3>Our Mission</h3>
-            <p>We revolvers making integrity with suter-experation alcing solutions management.</p>
-            <a href="products.html" class="search-button">Get Search</a>
+        <div class="home-container">
+            <div class="image-container">
+                <img src="https://image.makewebeasy.net/makeweb/m_1920x0/VmxzZ4LsF/DefaultData/S__39976999.jpg?v=202405291424" class="home-image" alt="home-image" />
+            </div>
+            <div class="content-container">
+                <h1 class="title">About</h1>
+                <p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    
+                </p>
+                <div class="button-container">
+                    <button id="learn-more" class="learn-more"> Learn More</button>
+                </div>
+            </div>
+        </div>
     </main>
-
     <div id="footer"></div>
 
-   
+
+    <script>
+        document.getElementById('learn-more').addEventListener("click",function(){
+            window.location.href="services.html";
+        })
+    </script>
 
     <script src="../assets/js/pages/partials.js"></script>
 </body>
+
 </html>
