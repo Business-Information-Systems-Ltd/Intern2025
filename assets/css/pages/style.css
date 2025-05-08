@@ -6,16 +6,19 @@
 .header-bar {
   display: flex; 
   justify-content: space-between; 
-  background-color: aqua;
+  background-color: rgb(16, 19, 71);
   padding: 15px 20px;
   font-family: sans-serif;
 }
 
-
+.brand-title{
+  text-decoration:none;
+  color: white;
+}
 .branding {
   font-size: 20px;
   font-weight: bold;
-  color: black;
+  color: white;
 }
 
 
@@ -31,7 +34,7 @@
 
 .nav-content a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 16px;
 }
 
