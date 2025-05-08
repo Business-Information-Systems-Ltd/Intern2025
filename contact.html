@@ -16,8 +16,31 @@
     </nav>
 
     <main>
-        <h1>Contact Us</h1>
-        <p>This is the Contact Us page content.</p>
+        <h1 class="contact_title">Contact Us</h1>
+        <h3 class="contact_subtitle">Get in Touch</h3>
+        <p class="contact_des">This is the Contact Us page content.</p>
+
+        <div>
+            <form class="contact_form" action="contact.html" method="POST">
+                <div>
+                    <label for="name">Name:</label> <br/>
+                    <input type="text" id="name" name="name" required >  
+                </div>
+
+                <div>
+                    <label for="email">Email:</label> <br/>
+                    <input type="email" id="email" name="email" required>   
+                </div>
+
+                <div>
+                    <label for="message">Message:</label> <br/>
+                    <textarea id="message" name="message" cols="70" rows="7" required></textarea>
+                </div> 
+
+                <div>
+                    <input type="submit" name="btnSubmit" class="btnSubmit" value="Seart"/>
+                </div>
+        </div>
     </main>
 
     <footer>

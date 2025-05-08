@@ -1,29 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="assets/css/pages/index.css">
+    <link rel="stylesheet" href="assets/css/pages/style.css">
 </head>
+
 <body>
-    <header>
-        <!-- Include header.html -->
-    </header>
+    <header id="header"></header>
 
-    <nav>
-        <!-- Include nav.html -->
-    </nav>
+   <nav id="nav-container"></nav>
 
-    <main>
-        <h1>Home</h1>
-        <p>This is the Home page content.</p>
+    <main class="index">
+        <section class="welcome-section">
+            <h1>Welcome to Our Software Developmet Company</h1>
+            <p>Incontorie Conrervacteion hear Bstineea Resforiax</p>
+            <a href="#" class="btn">Get Started</a>
+        </section>
     </main>
 
-    <footer>
-        <!-- Include footer.html -->
-    </footer>
+    <footer id="footer">
 
-    <script src="assets/js/pages/index.js"></script>
+    </footer>
+    <script src="assets/js/partials.js"></script>
+    <script>
+      fetch('partials/header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header').innerHTML = data;
+    });
+
+    fetch('partials/nav.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('nav-container').innerHTML = data;
+    });
+
+fetch('partials/footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('footer').innerHTML = data;
+    });
+
+       
+
+    </script>
+  
+
 </body>
+
 </html>
