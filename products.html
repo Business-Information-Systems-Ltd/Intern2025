@@ -1,36 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
-    <link rel="stylesheet" href="assets/css/pages/products.css">
+  
+  <title>Products</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      margin: 0;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .card h2 {
+      font-size: 18px;
+      margin: 12px 0 8px;
+      color: #333;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-<body style="padding: 30px;">
-    <header>
-        <!-- Include header.html -->
-    </header>
 
-    <nav>
-        <!-- Include nav.html -->
-    </nav>
+<body>
+  <main>
+    <h1>Products</h1>
+    <div class="product-grid" id="productGrid"></div>
+  </main>
 
-    <main>
-        <h1>Products</h1>
-        <h3 style="margin-top: 40px;">Product 1</h1>
-        <p>Product text, also known as product descriptions or product copy, refers to any written content that describes a product, its features, and benefits. It aims to inform potential customers about the product and persuade them to make a purchase. Good product text should be clear, concise</p>
+  <footer>
+  </footer>
 
-        <h3>Product 2</h1>
-        <p>Product text, also known as product descriptions or product copy, refers to any written content that describes a product, its features, and benefits. It aims to inform potential customers about the product and persuade them to make a purchase. Good product text should be clear, concise</p>
+  <script>
+    const products = [
+      {
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbC9sKDabiBPFfnFvZXpgGteX1_j5qHTTdKw&s",
+        title: "RPA robotic Process Automation",
+        description: "Robotic Process Automation (RPA) is a software technology that uses bots or software robots to automate repetitive, rule-based tasks. These bots mimic human actions, like clicking on applications, entering data, and copying data, to streamline processes."
+      },
+      {
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgN3PY3yM75Txw_mmX0nmXTi2e2FM40sdEcw&s",
+        title: "Integrated Accounting System",
+        description: "An integrated accounting system is a software platform that combines major financial accounting functions into a single application, eliminating the need for separate books or records for various accounting processes."
+      },
+      {
+        image: "https://prssmart.com/public/prssmart/blogs/image/20230220-114832290523544.jpg",
+        title: "HR and payroll system",
+        description: "Robotic Process Automation (RPA) is a software technology that uses bots or software robots to automate repetitive, rule-based tasks. These bots mimic human actions, like clicking on applications, entering data, and copying data, to streamline processes."
+      },
+      {
+        image: "https://prssmart.com/public/prssmart/blogs/image/20230220-114832290523544.jpg",
+        title: "HR and payroll system",
+        description: "Robotic Process Automation (RPA) is a software technology that uses bots or software robots to automate repetitive, rule-based tasks. These bots mimic human actions, like clicking on applications, entering data, and copying data, to streamline processes."
+      },
+    ];
 
-        <h3>Product 3</h1>
-        <p>Product text, also known as product descriptions or product copy, refers to any written content that describes a product, its features, and benefits. It aims to inform potential customers about the product and persuade them to make a purchase. Good product text should be clear, concise</p>
-    </main>
+    const grid = document.getElementById("productGrid");
 
-    <footer>
-        <!-- Include footer.html -->
-    </footer>
-
-    <script src="assets/js/pages/products.js"></script>
+    products.forEach(product => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <img src="${product.image}" alt="${product.title}">
+        <h2>${product.title}</h2>
+        <p>${product.description}</p>
+      `;
+      grid.appendChild(card);
+    });
+  </script>
 </body>
 </html>
