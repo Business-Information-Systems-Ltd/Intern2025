@@ -54,3 +54,9 @@
 .footer-content p {
   margin: 0; 
 }
+
+.nav-content a.active {
+  font-weight: bold;
+  color: red;
+  text-decoration: underline;
+}
