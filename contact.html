@@ -16,6 +16,7 @@
         <div id="header"></div>
 
     <main>
+    <div class="contact-div">
         <h1 class="contact-title">Contact Us</h1>
         <h3 class="contact-subtitle">Get in Touch</h3>
         <p class="contact-des">This is the Contact Us page content.</p>
@@ -41,20 +42,13 @@
                     <input type="submit" name="btnSubmit" class="btnSubmit" value="Start"/>
                 </div>
         </div>
+    </div>
     </main>
 
     <footer>
         <div id="footer"></div>
     </footer>
-     <script>
-        fetch('header.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('header').innerHTML = data);
-
-        fetch('footer.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('footer').innerHTML = data);
-    </script> 
+     
 
     <script src="assets/js/pages/partials.js">
 
