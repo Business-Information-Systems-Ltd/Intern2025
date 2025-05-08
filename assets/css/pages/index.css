@@ -5,7 +5,7 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-height: calc(100vh - 120px); /* Adjust based on header/footer height */
+    min-height: calc(100vh - 120px); 
     padding: 40px 20px;
     background-color: #f5f7fa;
 }
@@ -27,6 +27,47 @@ main p {
     max-width: 600px;
 }
 
+.main-section{
+    display: flex;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+.image-container img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .text-content {
+    margin-left: 30px;
+    max-width: 500px;
+  }
+  
+  .text-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .text-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .text-content button {
+    background-color: #004080;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .text-content button:hover {
+    background-color: #003060;
+  }
 .search-button {
     display: inline-block;
     padding: 15px 35px;
