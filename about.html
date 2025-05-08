@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="stylesheet" href="assets/css/pages/about.css">
+    <link rel="stylesheet" href="assets/css/pages/style.css">
+   
+
+    
 </head>
 <body>
-    <header>
-    
-    </header>
+    <div id="header"></div>
 
-    <nav>
-    </nav>
 
     <main>
             <h2><b>About Us</b></h2>
@@ -22,12 +22,22 @@
 
             <h3>Our Mission</h3>
             <p>We revolvers making integrity with suter-experation alcing solutions management.</p>
+            <a href="about.html" class="search-button">Get Search</a>
     </main>
 
-    <footer>
-        <!-- Include footer.html -->
-    </footer>
+    <div id="footer"></div>
 
-    <script src="assets/js/pages/about.js"></script>
+    <script>
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+    <script src="../assets/js/pages/partials.js"></script>
 </body>
 </html>
