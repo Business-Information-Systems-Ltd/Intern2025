@@ -9,12 +9,10 @@
 </head>
 
 <body>
-  <nav>
-    <!-- Include nav.html -->
-  </nav>
+  <div id="header"></div>
 
   <main>
-    <div style="padding: 10px;">
+    <div style="padding: 5px;">
       <h1>Our Clients</h1>
     </div>
     <div class="image-container">
@@ -38,6 +36,24 @@
       </div>
     </div>
     <style>
+      h1 {
+        font-size: 30px;
+        color: #000;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+      }
+
+      h3 {
+        font-size: 15px;
+        color: #000;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+      }
+
       .image-container {
         display: flex;
         gap: 10px; 
@@ -49,14 +65,7 @@
         max-width: 500px;
       }
 
-      /*.image-container img {
-        border:1px solid #ddd;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgb(0, 0, 0, 0.1);
-        margin: 5px;
-        
-      }*/
+      
 
       .image-container img {
         width: 200px;
@@ -68,11 +77,10 @@
     </div>
   </main>
 
-  <footer>
-    <!-- Include footer.html -->
-  </footer>
+  <div id="footer"></div>
 
-  <script src="assets/js/pages/clients.js"></script>
+    
+    <script src="assets/js/pages/partials.js"></script>
 </body>
 
 </html>
