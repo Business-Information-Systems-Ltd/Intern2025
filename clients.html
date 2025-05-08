@@ -1,55 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Clients</title>
-    <link rel="stylesheet" href="assets/css/pages/clients.css">
-    <link rel="stylesheet" href="assets/css/pages/style.css">
-</head>
-<body>
-  <div id="header"></div>
 
-    <main>
-      <div style="padding:20px">
-        <h1>Our Clients</h1>
-        <p><h3>Companies We Have Worked With</h3></p>
-        <div class="image-container">
-        <img src="https://blob.cloudcomputing.id/images/51e02a22-1854-4c6e-87e8-0983ef2c3c56/microsoft-l-min.jpg" alt="Image1">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIweelXTFYztSbewYy1KmDK8TwQ_rlqPGdNw&s" alt="Image 2">
-        </div>
-        <div class="image-container">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU97PO01iB618bXIy89J3eUHMGUghK8zMfgw&s" alt="Image 3">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Clients</title>
+  <link rel="stylesheet" href="assets/css/pages/clients.css">
+</head>
+
+<body>
+  <nav>
+    <!-- Include nav.html -->
+  </nav>
+
+  <main>
+    <div style="padding: 10px;">
+      <h1>Our Clients</h1>
+    </div>
+    <div class="image-container">
+
+      <div>
+        <img src="https://blob.cloudcomputing.id/images/51e02a22-1854-4c6e-87e8-0983ef2c3c56/microsoft-l-min.jpg"
+          alt="Image1">
+        <h3>About CS</h3>
+        <p>Upem ipsum es dotor sit amet consecitur eaigue.</p>
+      </div>
+      <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIweelXTFYztSbewYy1KmDK8TwQ_rlqPGdNw&s"
+          alt="Image 2">
+        <h3>Oracle</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU97PO01iB618bXIy89J3eUHMGUghK8zMfgw&s"
+          alt="Image 3">
+        <h3>SAP</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
     </div>
-      <style>
+    <style>
       .image-container {
         display: flex;
-        gap: 8px;
-        margin: 5px;
+        gap: 10px; 
+        margin: 8px;
+        padding-right: 10px;
+        line-height: 1.2;
+        border: 0;
+        height: 1px;
+        max-width: 500px;
       }
-      .image-container img {
+
+      /*.image-container img {
         border:1px solid #ddd;
         padding: 15px;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgb(0,0,0,0.1);
         margin: 5px;
         
-      }
-      
+      }*/
+
       .image-container img {
-        width: 200px; 
-        height: 60px;
-        object-fit: cover; 
+        width: 200px;
+        height: 50px;
+        object-fit: cover;
+        padding-right: 20px;
       }
-      
-      </style>
+    </style>
     </div>
-    </main>
+  </main>
 
-    <div id="footer"></div>
+  <footer>
+    <!-- Include footer.html -->
+  </footer>
 
-    
-    <script src="assets/js/pages/partials.js"></script>
+  <script src="assets/js/pages/clients.js"></script>
 </body>
+
 </html>
