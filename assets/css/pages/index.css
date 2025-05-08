@@ -1,61 +1,64 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #fff;
-    color: #333;
-  }
-  
-  .header-bar {
-    background-color: #1f1f1f;
-    padding: 15px 20px;
+/* Main Content Styles */
+main {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-  }
-  
-  .header-bar .logo {
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.2rem;
-  }
-  
-  .main-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 0.95rem;
-  }
-  
-  .main-nav a:hover {
-    text-decoration: underline;
-  }
-  
-  main.home {
+    justify-content: center;
     text-align: center;
-    padding: 100px 20px;
-  }
-  
-  .welcome-section h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-  }
-  
-  .welcome-section p {
-    color: #777;
-    margin-bottom: 25px;
-  }
-  
-  .btn {
-    background-color: #007bff;
-    padding: 10px 20px;
-    color: #fff;
+    min-height: calc(100vh - 120px); /* Adjust based on header/footer height */
+    padding: 40px 20px;
+    background-color: #f5f7fa;
+}
+
+main h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    max-width: 800px;
+}
+
+main p {
+    font-size: 1.25rem;
+    color: #7f8c8d;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.search-button {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #3498db;
+    color: white;
+    border: none;
     border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
     text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .btn:hover {
-    background-color: #0056b3;
-  }
-  
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    main h1 {
+        font-size: 2rem;
+    }
+    
+    main p {
+        font-size: 1rem;
+    }
+    
+    .search-button {
+        padding: 12px 28px;
+    }
+}
