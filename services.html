@@ -9,104 +9,106 @@
 
 </head>
 <style>
-
-    body {
-      font-family: "Inter", sans-serif;
-      color:#000;
-      font-weight: 700;
+body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
       margin: 0;
-      padding: 0;
     }
-    
-    
-    h2 {
-      color: #000;
-      padding:10px;
-      margin-bottom: 10px;
+
+    h1 {
+      margin-bottom: 30px;
     }
-    .service {
-      margin-bottom: 40px;
-      flex-direction: row;
-      
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
-    .service img {
-      height: 100px;
-       width: 150px;
-       
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-main{
-  padding: 10px;
 
-}
-.office{
-  font-size: 35px;
-   color: #090909;
-   font-weight: bold;
-   
-}
-.auto{
-  font-size:25 ;
 
-   color: #090909;
-   font-weight: bold;
-}
-.rppa{
-  font-size: 35px;
-   color: #090909;
-   font-weight: bold;
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
 
-}
-.robot{
-  font-size:25 ;
+    .card h2 {
+      font-size: 18px;
+      margin: 12px 0 8px;
+      color: #333;
+    }
 
-   color: #090909;
-   font-weight: bold;
+    .card p {
+      font-size: 14px;
+      color: #555;
+    }
 
-}
-.soft{
-  font-size: 35px;
-   color: #090909;
-   font-weight: bold;
-
-}
-.deve{
-  font-size:25 ;
-
-color: #090909;
-font-weight: bold;
-
-}
-.logo{
-  
-  border: medium solid #e9e3e3d1;
-  width: 15%;
-  
-  
-
-  
-}
-.micro{
-  border: 4px solid #e9e3e3d1;
-  width: 15%;
-
-}
-.net{
-  border: 4px solid #e9e3e3d1;
-  width: 15%;
-}
-</style>
+    @media (max-width: 768px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    </style>
 <body>
-  <div id="header"></div>
-
-    
-
-    <main>
-    
-        <h2>Services</h2>
+  <main>
+    <h1>Services</h1>
+    <div class="product-grid" id="productGrid"></div>
+  </main>
 
 
-        <div class="service" style="display: flex; flex-direction: row;align-items: center;">
+  <footer>
+  </footer>
 
+  <script>
+    const products = [
+      {
+        image: "https://www.odoo-bs.com/web/image/1564098-5d87fa15/Odoo.png",
+        title: "ERP implementation Service",
+        description: "Odoo is a suite of Belgian origin business management software tools that include customer relationship."
+      },
+      {
+        image: "data:image/png;base64,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",
+        title: "Office Automation Services",
+        description: "Microsoft 365 is a product family of productivity software, collaboration and cloud-based services owned by Microsoft.."
+      },
+      {
+        image: "data:image/png;base64,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",
+        title: "Software Developement",
+        description: ".NET is a secure, reliable, and high-performance application platform. C# is the programming language for .NET. It's strongly-typed and type-safe.."
+      },
+      {
+        title: "ERP Impliem Services",
+        description: "ERP stands for Enterprise Resource Planning. It's a software system that helps organizations manage their core business processes like finance, HR, manufacturing, and supply chain. ERP systems integrate these processes, providing a unified view of business operations and a single source of truth for data. ."
+      },
+      {
+      image: "",
+        title: "Office Auton Services",
+        description: ".NET is a secure, reliable, and high-performance application platform. C# is the programming language for .NET. It's strongly-typed and type-safe.."
+      },
+
+    ];
+
+    const grid = document.getElementById("productGrid");
+
+    products.forEach(product => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <img src="${product.image}" alt="${product.title}">
+        <h2>${product.title}</h2>
+        <p>${product.description}</p>
+      `;
+      grid.appendChild(card);
+    });
+  </script>
           <div style="width: 20%">
             <div class="rppa">RPPA</div>
             <div class="robot">Robotics Proces Automation</div>

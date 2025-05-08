@@ -21,6 +21,11 @@
   color: white;
 }
 
+.brand-title{
+  text-decoration:none;
+  color: black;
+}
+
 
 .nav-content ul {
   list-style: none;

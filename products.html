@@ -5,8 +5,8 @@
   <title>Products</title>
   <style>
     body {
-      font-family:"Inter", sans-serif;
-     
+      font-family: Arial, sans-serif;
+      
       margin: 0;
     }
 
@@ -17,16 +17,14 @@
 
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
 
     .card {
-      border: 1px solid #ddd;
       border-radius: 8px;
       padding: 16px;
       background-color: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
 
@@ -58,8 +56,11 @@
 <body>
   <div id="header"></div>
   <main>
-    <h1>Products</h1>
-    <div class="product-grid" id="productGrid"></div>
+    <div style="padding: 30px;">
+        <h1>Products</h1>
+        <div class="product-grid" id="productGrid"></div>
+    </div>
+    
   </main>
   <div id="footer"></div>
 
@@ -69,12 +70,12 @@
   <script>
     const products = [
       {
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbC9sKDabiBPFfnFvZXpgGteX1_j5qHTTdKw&s",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4EknCi7sefQKUfbPfgv170eyshDm4NE3BdQ&s",
         title: "RPA robotic Process Automation",
         description: "Robotic Process Automation (RPA) is a software technology that uses bots or software robots to automate repetitive, rule-based tasks. These bots mimic human actions, like clicking on applications, entering data, and copying data, to streamline processes."
       },
       {
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgN3PY3yM75Txw_mmX0nmXTi2e2FM40sdEcw&s",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJEBrtPafYswnEd2HSNm9Iq8eRIAKa2evXjQ&s",
         title: "Integrated Accounting System",
         description: "An integrated accounting system is a software platform that combines major financial accounting functions into a single application, eliminating the need for separate books or records for various accounting processes."
       },
@@ -83,11 +84,7 @@
         title: "HR and payroll system",
         description: "Robotic Process Automation (RPA) is a software technology that uses bots or software robots to automate repetitive, rule-based tasks. These bots mimic human actions, like clicking on applications, entering data, and copying data, to streamline processes."
       },
-      {
-        image: "https://prssmart.com/public/prssmart/blogs/image/20230220-114832290523544.jpg",
-        title: "HR and payroll system",
-        description: "Robotic Process Automation (RPA) is a software technology that uses bots or software robots to automate repetitive, rule-based tasks. These bots mimic human actions, like clicking on applications, entering data, and copying data, to streamline processes."
-      },
+      
     ];
 
     const grid = document.getElementById("productGrid");
